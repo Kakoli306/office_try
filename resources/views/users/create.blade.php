@@ -71,6 +71,28 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="roles"
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Roles') }}</label>
+                                    <select name="roles">
+	                                <option value="none" selected>Select Roles</option>
+	                                 <option value="admin">Admin</option>
+                                     <option value="team_members">Team Members</option>
+                                      </select>
+
+                                <div class="col-md-6">
+                                    <!-- <input id="roles" type="text"
+                                        class="form-control @error('roles') is-invalid @enderror" name="roles"
+                                        value="{{ old('roles') }}" required autocomplete="roles" autofocus> -->
+
+                                    @error('roles')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="email"
                                     class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 

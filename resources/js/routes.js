@@ -1,6 +1,8 @@
 import EmployeesIndex from "./components/employees/Index";
 import EmployeesCreate from "./components/employees/Create";
 import EmployeesEdit from "./components/employees/Edit";
+import Edit from "./pages/edit";
+
 
 export const routes = [
     {
@@ -17,5 +19,10 @@ export const routes = [
         path: "/employees/:id",
         name: "EmployeesEdit",
         component: EmployeesEdit
+    },
+    {
+        path: "/edit",
+        name: "edit",
+        component: Edit
     }
 ];
